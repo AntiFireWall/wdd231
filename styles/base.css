@@ -1,0 +1,37 @@
+*
+{
+    --primary-color: rgb(0, 211, 176);
+    --secondary-color: black;
+
+    --heading-font: 'Open Sans', serif;
+    --paragraph-font: 'Raleway', serif;
+    margin: 0;
+}
+
+body
+{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer
+{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    margin-top: auto;
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+footer p
+{
+    display: flex;
+    align-self: center;
+}
+
+footer img
+{
+    height: 25px;
+}
