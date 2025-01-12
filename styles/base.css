@@ -6,6 +6,13 @@
     --heading-font: 'Open Sans', serif;
     --paragraph-font: 'Raleway', serif;
     margin: 0;
+
+    font-family: var(--paragraph-font);
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    font-family: var(--heading-font);
 }
 
 body
@@ -13,6 +20,59 @@ body
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+header
+{
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-self: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+header div
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    width: 100%;
+    background-color: var(--primary-color);
+}
+
+header div img
+{
+    height: 120px;
+    padding-right: 10px;
+}
+
+header nav 
+{
+    font-size: 1.5em;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+}
+
+header nav a
+{
+    padding: 20px;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--secondary-color);
+}
+
+header nav a:hover
+{
+    transition: 0.5s;
+    color: black;
+    background-color: bisque;
 }
 
 footer
