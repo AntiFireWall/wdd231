@@ -1,0 +1,33 @@
+@media only screen and not (min-width: 800px) 
+{
+    .nav-bar
+    {
+        display: none;
+    }    
+
+    /* Classes */
+
+    .menu
+    {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 70px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .nav-show
+    {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0px;
+        justify-content: right;
+        align-items: center;
+    }
+
+    .nav-show a
+    {
+        padding: 15px 0;
+    }
+}
