@@ -11,7 +11,7 @@
     {
         display: block;
         position: absolute;
-        right: 20px;
+        right: 15px;
         top: 70px;
         cursor: pointer;
         user-select: none;
@@ -29,5 +29,10 @@
     .nav-show a
     {
         padding: 15px 0;
+    }
+
+    .studentBanner
+    {
+        font-size: small;
     }
 }
