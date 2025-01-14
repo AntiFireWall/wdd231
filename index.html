@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;family=Raleway:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet" defer>
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/hamburger.js" defer></script>
+    <script src="scripts/course-list.js" defer></script>
 </head>
 <body>
     <header>
@@ -35,16 +36,27 @@
     <main>
         <section class="course-work">
             <h2>Course Work</h2>
-            <li></li>
-            <li></li>
-            <li></li>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </section>
         <section class="country">
             <h2>Yerevan, Armenia</h2>
             <div><img src="images/mount_Ararat.webp" alt="Mount Ararat"></div>
             <p>Ararat Mountain</p>
         </section>
-        <section class="course-list"></section>
+        <section class="course-list">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div id="course-filters">
+                <button id="all" class="button">All</button>
+                <button id="cse" class="button">CSE</button>
+                <button id="wdd" class="button">WDD</button>
+            </div>
+            <p>The total number of credits is <span id="credits"></span></p>
+            <div id="courses-by-filter"></div>
+        </section>
     </main>
     <footer>
         <p>&copy;<span id="currentyear"></span> | Daniel Ayvazyan | Armenia | <img src="images/image.png" alt="Armenian flag"></p>

@@ -1,11 +1,18 @@
 @media only screen and not (min-width: 800px) 
 {
+
+    main
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Classes */
+
     .nav-bar
     {
         display: none;
-    }    
-
-    /* Classes */
+    }
 
     .menu
     {
@@ -15,6 +22,7 @@
         top: 70px;
         cursor: pointer;
         user-select: none;
+        margin: 0;
     }
 
     .nav-show
@@ -34,5 +42,15 @@
     .studentBanner
     {
         font-size: small;
+    }
+
+    #course-filters button
+    {
+        width: 6rem;
+    }
+
+    #courses-by-filter
+    {
+        grid-template-columns: 1fr;
     }
 }
