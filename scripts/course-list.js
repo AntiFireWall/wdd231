@@ -93,7 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
             course.classList.add('completed')
         }
         courses_by_filter.appendChild(course)
-        console.log('test')
     });
 });
 
@@ -101,7 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const course = document.querySelectorAll('.course')
 
     const shown_courses = document.querySelectorAll('.show')
-    console.log(shown_courses)
     const filtered_array = []
     shown_courses.forEach(element => {
         const item = courses.filter((item) => element.textContent.includes(item.subject + item.number))
@@ -127,17 +125,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const shown_courses = document.querySelectorAll('.show')
-            console.log(shown_courses)
             const filtered_array = []
             shown_courses.forEach(element => {
                 const item = courses.filter((item) => element.textContent.includes(item.subject + item.number))
                 filtered_array.push(item[0])
             })
-
-            console.log(filtered_array)
             
-         
-            // console.log(filtered_array.reduce((total, item) => {return total + item.credits}, 0))
             credits.textContent = filtered_array.reduce((total, item) => {return total + item.credits}, 0)
         })
     })
