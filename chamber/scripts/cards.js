@@ -17,7 +17,8 @@ async function displayMembers()
         const phone = document.createElement("p");
         const url = document.createElement("p");
         const image = document.createElement("img");
-        image.setAttribute("alt", "logo")
+        image.setAttribute("alt", "logo");
+        image.setAttribute("loading", "lazy");
         
         name.textContent = member.name;
         tagLine.textContent = member.other_information;
