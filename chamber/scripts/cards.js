@@ -2,7 +2,7 @@ const cards = document.querySelector(".cards");
 
 async function displayMembers()
 {
-    const members = await fetch("/chamber/data/members.json").then(async function(resp) {return await resp.json()});
+    const members = await fetch("../chamber/data/members.json").then(async function(resp) {return await resp.json()});
     console.log(members)
     members.forEach(member => {
         const card = document.createElement("div");
