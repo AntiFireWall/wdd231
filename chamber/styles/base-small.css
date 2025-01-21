@@ -1,0 +1,97 @@
+@media only screen and not (min-width: 750px)
+{
+    header
+    {
+        flex-direction: column;
+    }
+
+    footer
+    {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    footer div
+    {
+        margin: 5px 0;
+    }
+
+    /* Class and ID */
+
+    .menu
+    {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 50px;
+        cursor: pointer;
+        user-select: none;
+        margin: 0;
+    }
+
+    .nav-bar
+    {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.5s ease-out;
+
+        grid-template-columns: 1fr;
+    }
+
+    .nav-bar.nav-show
+    {
+        grid-template-rows: 1fr;
+    }
+
+    .nav-links
+    {
+        flex-direction: column;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .nav-links li
+    {
+        padding: 10px 0;
+        transition: background-color 0.5s;
+    }
+
+    .nav-links li:hover
+    {
+        transition: background-color 0.5s;
+        background-color: var(--accent-color);
+    }
+
+    .nav-links li a
+    {
+        padding: 0;
+    }
+
+    .nav-links li a:hover
+    {
+        background-color: unset;
+    }
+
+    .current-page a
+    {
+        background-color: unset;
+        pointer-events: none;
+    }
+
+    .current-page
+    {
+        background-color: var(--accent-color);
+        pointer-events: none;
+    }
+
+    .cards
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .layout-grid
+    {
+        display: none;
+    }
+}
