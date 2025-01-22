@@ -90,6 +90,11 @@
         flex-direction: column;
     }
 
+    .cardInfo
+    {
+        grid-template-columns: 74px 250px;
+    }
+
     .layout-grid
     {
         display: none;
