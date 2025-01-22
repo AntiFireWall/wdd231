@@ -3,16 +3,16 @@
       "name": "GreenLeaf Landscaping",
       "address": "123 Elm Street, Springfield, IL 62701",
       "phone_number": "(555) 123-4567",
-      "website_url": "http://www.greenleafls.com",
+      "website_url": "www.greenleafls.com",
       "image_icon_file": "greenleaf_icon.webp",
       "membership_level": 2,
-      "other_information": "Specializes in eco-friendly landscaping services."
+      "other_information": "Specializes in eco-friendly landscaping."
     },
     {
       "name": "TechHaven Solutions",
       "address": "456 Maple Avenue, Austin, TX 73301",
       "phone_number": "(512) 987-6543",
-      "website_url": "http://www.techhavensolutions.com",
+      "website_url": "www.techhavensolutions.com",
       "image_icon_file": "techhaven_logo.webp",
       "membership_level": 3,
       "other_information": "Provides IT consulting for small businesses."
@@ -21,7 +21,7 @@
       "name": "UrbanEats Bistro",
       "address": "789 Pine Street, Seattle, WA 98101",
       "phone_number": "(206) 321-9876",
-      "website_url": "http://www.urbaneatsbistro.com",
+      "website_url": "www.urbaneatsbistro.com",
       "image_icon_file": "urbaneats_icon.webp",
       "membership_level": 1,
       "other_information": "Known for farm-to-table dishes and brunches."
@@ -30,7 +30,7 @@
       "name": "BlueSky Travel Agency",
       "address": "321 Sunset Boulevard, Miami, FL 3310",
       "phone_number": "(305) 555-1234",
-      "website_url": "http://www.blueskytravel.com",
+      "website_url": "www.blueskytravel.com",
       "image_icon_file": "bluesky_logo.webp",
       "membership_level": 3,
       "other_information": "Specializes in luxury vacation packages."
@@ -39,28 +39,28 @@
       "name": "FitCore Gym",
       "address": "555 Fitness Lane, Denver, CO 80201",
       "phone_number": "(303) 987-6543",
-      "website_url": "http://www.fitcoregym.com",
+      "website_url": "www.fitcoregym.com",
       "image_icon_file": "fitcore_logo.webp",
       "membership_level": 2,
-      "other_information": "Offers personal training and group fitness classes."
+      "other_information": "Offers personal training and group classes."
     },
     {
       "name": "Aurora Art Studio",
       "address": "888 Canvas Road, Portland, OR 97201",
       "phone_number": "(503) 654-3210",
-      "website_url": "http://www.auroraartstudio.com",
+      "website_url": "www.auroraartstudio.com",
       "image_icon_file": "aurora_icon.webp",
       "membership_level": 1,
-      "other_information": "Provides workshops and hosts gallery exhibitions."
+      "other_information": "Provides workshops and hosts exhibitions."
     },
     {
       "name": "BrightStar Learning Center",
       "address": "101 Knowledge Way, Boston, MA 0210",
       "phone_number": "(617) 555-6789",
-      "website_url": "http://www.brightstarlearning.com",
+      "website_url": "www.brightstarlearning.com",
       "image_icon_file": "brightstar_icon.webp",
       "membership_level": 3,
-      "other_information": "Offers tutoring and online educational resources."
+      "other_information": "Offers tutoring and online resources."
     }
   ]
   
