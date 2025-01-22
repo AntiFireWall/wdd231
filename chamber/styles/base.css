@@ -76,6 +76,12 @@ footer div
     align-items: center;
 }
 
+#logo-box img
+{
+    width: 110;
+    height: 110;
+}
+
 #logo-box-text
 {
     width: 180px;
@@ -157,6 +163,12 @@ footer div
 {
     flex-direction: row;
     gap: 15px;
+}
+
+.social-media img
+{
+    width: 64px;
+    height: 64px;
 }
 
 /* Layout Button */
@@ -246,6 +258,12 @@ footer div
     background-color: var(--secondary-color);
     padding: 10px;
     border-radius: 15px;
+}
+
+.cards img
+{
+    width: 64px;
+    height: 64px;
 }
 
 .card h2, .card p, .card b
