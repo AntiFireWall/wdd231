@@ -373,7 +373,7 @@ footer div
 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, fit-content);
+    grid-template-rows: 31.32px 1fr;
 }
 
 #current-weather h3
