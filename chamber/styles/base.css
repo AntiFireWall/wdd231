@@ -4,8 +4,8 @@
     --secondary-color: #229799;
     --accent-color: #F5F5F5;
     --accent-color2: black;
-    --heading-color: #424242;
-    --paragraph-color: #424242;
+    --heading-color: black;
+    --paragraph-color: black;
 
     /* Page Font vars */
     --heading-font: 'Open Sans', serif;
@@ -266,11 +266,6 @@ footer div
     height: 64px;
 }
 
-.card h2, .card p, .card b
-{
-    color: black;
-}
-
 .cardInfo
 {
     margin-top: 5px;
@@ -309,4 +304,121 @@ footer div
     flex-direction: column;
     gap: 5px;
     width: 800px;
+}
+
+/* Home Page */
+
+.hero-banner
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.hero-img 
+{
+    width: 100%;
+    height: auto;
+}
+
+#hero-button
+{
+    position: absolute;
+    bottom: 4%;
+    right: 1.5%;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    height: auto;
+}
+
+#home-title
+{
+    width: 98%;
+    margin-bottom: 15px;
+}
+
+.events-and-weather
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 98%;
+}
+
+.events-and-weather section
+{
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+.events-and-weather section h3
+{
+    background-color: var(--secondary-color);
+    padding: 5px 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+#events
+{
+    grid-column: span 2;
+}
+
+#current-weather
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, fit-content);
+}
+
+#current-weather h3
+{
+    grid-column: span 2;
+}
+
+#current-weather img 
+{
+    align-self: center;
+    justify-self: center;
+    background-color: var(--secondary-color);
+    border-radius: 150px;
+    width: 70px;
+    height: auto;
+}
+
+#weather-info
+{
+    padding: 10px 0;
+}
+
+#forecast
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#forecast p
+{
+    padding-left: 20px;
+    padding-top: 25px;
+}
+
+.less-cards
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    width: 98%;
+}
+
+.less-cards img
+{
+    width: 64px;
+    height: 64px;
 }

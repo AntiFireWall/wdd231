@@ -104,4 +104,30 @@
     {
         display: none;
     }
+
+    /* Home Page */
+
+    #home-title
+    {
+        width: 95%;
+    }
+
+    .events-and-weather
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        width: 95%;
+    }
+
+    #events
+    {
+        grid-column: 1;
+    }
+
+    .less-cards
+    {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+    }
 }
