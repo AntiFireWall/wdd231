@@ -422,3 +422,209 @@ footer div
     width: 64px;
     height: 64px;
 }
+
+/* Join Page */
+
+#membership-join
+{
+    display: flex;
+    gap: 10px;
+}
+
+form
+{
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+fieldset
+{
+    border: black 2px solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    font-weight: bold;
+    width: 350px;
+}
+
+legend
+{
+    padding: 0 5px;
+}
+
+label
+{
+    display: flex;
+    flex-direction: column;
+    margin: 3px 0px;
+}
+
+input, select, textarea
+{
+    margin-top: 3px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+    transition: border 0.5s;
+}
+
+textarea
+{
+    height: 100px;
+}
+
+input:focus, select:focus, textarea:focus
+{
+    border: 2px solid black;
+}
+
+input:hover, select:hover, textarea:hover
+{
+    border: 2px solid black;
+    outline: none;
+}
+
+input:required:invalid
+{
+    border: 2px solid red;
+}
+
+form button
+{
+    color: white;
+    background-color: var(--accent-color2);
+    padding: 10px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+form button:hover
+{
+    background-color: var(--accent-color);
+    color: var(--accent-color2);
+}
+
+.membership-cards div
+{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    width: 230px;
+    padding: 10px;
+    margin: 5px 0;
+    border: 3px solid var(--secondary-color);
+    background-color: var(--primary-color);
+    border-radius: 15px;
+}
+
+#membership-1
+{
+    border: 3px solid #804A00;
+    background-color: #B08D57;
+}
+
+#membership-2
+{
+    border: 3px solid #AFB1AE;
+    background-color: #D8D8D8;
+}
+
+#membership-3
+{
+    border: 3px solid #F9C03E;
+    background-color: #FEEF72;
+}
+
+.membership-cards div > button
+{
+    color: white;
+    background-color: var(--accent-color2);
+    padding: 8px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.membership-cards div > button:hover
+{
+    background-color: var(--accent-color);
+    color: var(--accent-color2);
+}
+
+:modal
+{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    width: 400px;
+    top: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--accent-color);
+    border: var(--secondary-color) 5px solid;
+    border-radius: 10px;
+}
+
+:modal button
+{
+    color: white;
+    background-color: var(--accent-color2);
+    padding: 8px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+::backdrop
+{
+    animation: blur-in 0.5s forwards;
+}
+
+#membership-1-info
+{
+    border: 5px solid #804A00;
+}
+
+#membership-2-info
+{
+    border: 5px solid #AFB1AE;
+}
+
+#membership-3-info
+{
+    border: 5px solid #F9C03E;
+}
+
+@keyframes blur-in {
+    form{
+        backdrop-filter: blur(0px);
+        background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+        backdrop-filter: blur(3px);
+        background-color: rgba(0, 0, 0, 0.538);
+    }
+}
+
+#thankyou
+{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+    border: var(--primary-color) solid 3px;
+    border-radius: 10px;
+    background-color: var(--accent-color);
+}

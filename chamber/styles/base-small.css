@@ -130,4 +130,22 @@
         flex-direction: column;
         width: 95%;
     }
+
+    /* Join Page */
+    #membership-join
+    {
+        flex-direction: column;
+    }
+
+    .membership-cards
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .membership-cards div
+    {
+        width: 93%;
+    }
 }
