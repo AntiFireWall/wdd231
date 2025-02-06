@@ -1,6 +1,5 @@
 const message = document.querySelector("#thankyou")
 const data = document.URL.split("?")[1].split("&")
-console.log(data)
 
 function displayInformation()
 {
@@ -29,12 +28,10 @@ function displayInformation()
 function getData(item)
 {
     let value = ""
-    console.log(item);
     data.forEach(line => {
         if(line.startsWith(item))
             {
                 value = line.split("=")[1].replace("%40", "@").replaceAll("+", " ").replaceAll("%28", "(").replaceAll("%29", ")").replaceAll("%2B", "+").replaceAll("%3A", ":")
-                console.log(value)
             }
     });
     return value;
