@@ -561,11 +561,8 @@ form button:hover
     color: var(--accent-color2);
 }
 
-:modal
+.membership-cards div dialog
 {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
     position: relative;
     width: 400px;
     top: 30%;
@@ -576,8 +573,14 @@ form button:hover
     border-radius: 10px;
 }
 
-:modal button
+.membership-cards div dialog p
 {
+    margin-top: 15px;
+}
+
+.membership-cards div dialog button
+{
+    margin-top: 15px;
     color: white;
     background-color: var(--accent-color2);
     padding: 8px;
@@ -608,7 +611,7 @@ form button:hover
 }
 
 @keyframes blur-in {
-    form{
+    from{
         backdrop-filter: blur(0px);
         background-color: rgba(0, 0, 0, 0);
     }
