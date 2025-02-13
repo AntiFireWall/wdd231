@@ -634,6 +634,16 @@ form button:hover
 
 /* Discover Page */
 
+main h1
+{
+    text-align: center;
+}
+
+#visit
+{
+    text-align: center;
+}
+
 .sites-gallery
 {
     display: grid;
