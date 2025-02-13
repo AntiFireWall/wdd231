@@ -148,4 +148,29 @@
     {
         width: 93%;
     }
+
+    .sites-gallery
+    {
+        width: 95%;
+    }
+
+    .site-card img
+    {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and not (min-width: 640px)
+{
+
+    .site-card
+    {
+        grid-template-areas:
+        "name" 
+        "image" 
+        "description"
+        "address"
+        "button";
+    }
 }

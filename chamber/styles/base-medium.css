@@ -1,0 +1,7 @@
+@media only screen and not (min-width: 1024px)
+{
+    .sites-gallery
+    {
+        grid-template-columns: 1fr;
+    }
+}
