@@ -15,7 +15,7 @@ export const sites = [
     "name": "Armenian Genocide Memorial (Tsitsernakaberd)",
     "address": "Tsitsernakaberd Highway, Yerevan, Armenia",
     "description": "Tsitsernakaberd is the official memorial dedicated to the victims of the Armenian Genocide. The complex includes a 44-meter-high stele, an eternal flame surrounded by twelve slabs, a 100-meter-long wall with inscriptions of affected Armenian communities, a museum, and a park. Each year on April 24, thousands gather here to commemorate the genocide.",
-    "image_url": "images/Genocide Memorial.webp"
+    "image_url": "images/Genocide-Memorial.webp"
   },
   {
     "name": "Matenadaran",
