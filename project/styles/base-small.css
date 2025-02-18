@@ -1,0 +1,14 @@
+@media only screen and not (min-width: 750px)
+{
+    .menu
+    {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 50px;
+        cursor: pointer;
+        user-select: none;
+        margin: 0;
+    }
+}
+

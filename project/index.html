@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This website will help you memorize you Scriptures!">
+    <meta name="author" content="Daniel Ayvazyan">
+    <meta property="og:title" content="Scripture Memorizer">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="????">
+    <meta property="og:url" content="https://antifirewall.github.io/wdd231/project/index.html">
+    <meta property="og:description" content="This website will help you memorize you Scriptures!">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Scripture Memorizer - Home</title>
+    <link rel="icon" href="logo.ico">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/base-small.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <script src="scripts/hamburger.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/stars.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="menu" onclick="openNav(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <h1>Scripture Memorizer</h1>
+        <nav id="animateme" class="nav-bar">
+            <ul class="nav-links">
+                <li id="current-page"><a href="#">Home</a></li>
+                <li><a href="memorizer.html">Scripture Memorizer</a></li>
+                <li><a href="report.html">Report Bug</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="greet-text">
+            <h1>Scripture Memorizer</h1>
+            <h2>Welcome Player!</h2>
+            <p>Do you need to memorize the Scriptures? Well, you came to the right place! 
+                This website is designed to help you on your journey to memorizing all of the Scriptures. 
+                Remember, even if you know the Scriptures perfectly, word for word, the most important thing is to understand their meaning.
+            </p>
+            <h3>Ok, enough talking Player, get to memorizing! </h3>
+            <a href="memorizer.html">Start Memorizing!</a>
+        </section>
+        <div id="starBox"></div>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Daniel Ayvazyan | WDD 231 Project | Armenia</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
