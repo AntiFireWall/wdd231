@@ -2,7 +2,7 @@
     /* Page Color vars */
     --primary-color: #b56ba8;
     --secondary-color: #4B164C;
-    --accent-color: #F8E7F6;
+    --accent-color: #f5daf2;
     --accent-color2: #F5F5F5;
     --text-color: white;
 
@@ -124,17 +124,17 @@ header h1
 .nav-links li a:hover
 {
     transition: 0.5s;
-    color: black;
+    color: var(--secondary-color);
     background-color: var(--accent-color);
-    border: rgb(0, 0, 0) solid 3px;
+    border: var(--secondary-color) solid 3px;
 }
 
 #current-page a
 {
     pointer-events: none;
-    color: black;
+    color: var(--secondary-color);
     background-color: var(--accent-color);
-    border: rgb(0, 0, 0) solid 3px;
+    border: var(--secondary-color) solid 3px;
 }
 
 /* Main */
@@ -153,25 +153,34 @@ main
 {
     display: flex;
     flex-direction: column;
-    gap: 3px;
     align-items: center;
     text-align: center;
-    padding: 25px 20px;
-    width: 500px;
+    padding: 30px 25px;
+    width: 620px;
     background-color: rgba(0, 0, 0, 0.356);
-    border: var(--accent-color2) solid 5px;
+    border: var(--accent-color) solid 5px;
     box-shadow: black 5px 5px 10px;
     z-index: 0;
 }
 
-#greet-text a
+#greet-text h1
+{
+    font-size: 2.5rem;
+}
+
+#greet-text #text
 {
     margin-top: 10px;
+}
+
+#greet-text a
+{
+    margin-top: 15px;
     padding: 7px;
     text-decoration: none;
     font-weight: bold;
     background-color: var(--primary-color);
-    color: black;
+    color: white;
     transition: 0.5s;
     border: solid 3px rgba(255, 255, 255, 0);
 }
@@ -179,8 +188,8 @@ main
 #greet-text a:hover
 {
     background-color: var(--secondary-color);
-    color: white;
-    border: solid 3px rgb(255, 255, 255);
+    color: var(--accent-color);
+    border: solid 3px var(--accent-color);
 }
 
 /* Stars */
@@ -203,6 +212,7 @@ footer
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 /* Animation */
