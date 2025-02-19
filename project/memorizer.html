@@ -11,7 +11,7 @@
     <meta property="og:url" content="https://antifirewall.github.io/wdd231/project/index.html">
     <meta property="og:description" content="This website will help you memorize your Scriptures!">
     <meta name="twitter:card" content="summary_large_image">
-    <title>Scripture Memorizer - Home</title>
+    <title>Scripture Memorizer - Game</title>
     <link rel="icon" href="logo.ico">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/base-small.css">
@@ -21,6 +21,8 @@
     <script src="scripts/hamburger.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/stars.js" defer></script>
+    <script src="scripts/memorizer.js" defer></script>
+    <script src="scripts/scripturewheel.js" type="module"></script>
 </head>
 <body>
     <header>
@@ -32,23 +34,20 @@
         <h1>Scripture Memorizer</h1>
         <nav id="animateme" class="nav-bar">
             <ul class="nav-links">
-                <li id="current-page"><a href="index.html">Home</a></li>
-                <li><a href="memorizer.html">Scripture Memorizer</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li id="current-page"><a href="memorizer.html">Scripture Memorizer</a></li>
                 <li><a href="report.html">Report Bug</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="greet-text">
-            <h1>Welcome Player</h1>
-            <p>To</p>
-            <h2>Scripture Memorizer</h2>
-            <p id="text">Do you need to memorize the Scriptures? Well, you came to the right place! 
-                This website is designed to help you on your journey to memorizing all of the Scriptures. 
-                Remember, even if you know the Scriptures perfectly, word for word, the most important thing is to understand their meaning.
-            </p>
-            <h3>Ok, enough talking Player. Get to memorizing! </h3>
-            <a href="memorizer.html">Start Memorizing!</a>
+        <section id="memorizer-menu">
+            <h1>Scripture Memorizer <br> Let's Begin!</h1>
+            <button id="mm-button1" onclick="">Custom Scripture List</button>
+            <button id="mm-button2" onclick="">Popular Scripture List</button>
+        </section>
+        <section id="memorizer-game">
+            
         </section>
         <div id="starBox"></div>
     </main>

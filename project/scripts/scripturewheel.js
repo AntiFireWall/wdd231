@@ -1,0 +1,1 @@
+import {popularScriptures} from "../data/popularscriptures.mjs"

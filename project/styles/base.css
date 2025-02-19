@@ -215,6 +215,68 @@ footer
     text-align: center;
 }
 
+/* Scripture Memorizer Page */
+
+#memorizer
+{
+    padding: 35px;
+    background-color: rgba(0, 0, 0, 0.356);
+    border: var(--accent-color) solid 5px;
+    box-shadow: black 5px 5px 10px;
+}
+
+#memorizer-menu
+{
+    padding: 35px;
+    background-color: rgba(0, 0, 0, 0.356);
+    border: var(--accent-color) solid 5px;
+    box-shadow: black 5px 5px 10px;
+    display: none;
+    grid-template-areas: 
+    "title title"
+    "button1 button2";
+    gap: 15px;
+    text-align: center;
+}
+
+#memorizer-menu h1
+{
+    grid-area: title;
+}
+
+#memorizer-menu h2
+{
+    grid-area: title2;
+}
+
+#mm-button1, #mm-button2
+{
+    padding: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--primary-color);
+    color: white;
+    transition: 0.5s;
+    border: solid 3px rgba(255, 255, 255, 0);
+}
+
+#mm-button1:hover, #mm-button2:hover
+{
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    border: solid 3px var(--accent-color);
+}
+
+#mm-button1
+{
+    grid-area: button1;
+}
+
+#mm-button2
+{
+    grid-area: button2;
+}
+
 /* Animation */
 
 @keyframes flicker
@@ -224,5 +286,35 @@ footer
     }
     100%{
         opacity: 15%;
+    }
+}
+
+/* Animation Classes */
+
+.fade-out
+{
+    animation: fade-out 1s 1 forwards;
+}
+
+.fade-in
+{
+    animation: fade-in 1s 1 forwards;
+}
+
+@keyframes fade-out {
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}
+
+@keyframes fade-in {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
     }
 }
