@@ -559,7 +559,7 @@ label:has(input:invalid) ~ button, label:has(textarea:invalid) ~ button
     opacity: 0.2;
     pointer-events: none;
     animation: none;
-    transition: 0.5 all;
+    transition: 0.5s all;
 }
 
 dialog
