@@ -90,7 +90,7 @@ function addScriptureToList(script)
 
 async function getScriptureFromLocal(amount)
 {
-    const scriptList = await apiFetch("../data/popularscriptures.json");
+    const scriptList = await apiFetch("./data/popularscriptures.json");
 
     for(let i = 0; i < amount; i++ )
     {
