@@ -442,6 +442,156 @@ footer
     background: #555;
   }
 
+/* Form */
+form 
+{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 500px;
+}
+
+label
+{
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.5rem;
+    user-select: none;
+    position: relative;
+}
+
+textarea 
+{
+    height: 255px;
+    color: var(--text-color);
+}
+
+input, textarea
+{
+    border: var(--accent-color) solid 3px;
+    background-color: var(--secondary-color);
+    padding: 0.2rem;
+}
+
+form p 
+{
+    position: absolute;
+    right: 10px;
+    bottom: 4px;
+}
+
+input:invalid + p::after, textarea:invalid + p::after 
+{
+    content: "X";
+    font-weight: bolder;
+}
+
+input:valid + p::after, textarea:valid + p::after 
+{
+    content: "O";
+    font-weight: bolder;
+}
+
+input::selection, textarea::selection 
+{
+    background-color: var(--primary-color);
+    color: black;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    color: var(--text-color);
+}
+
+input::spelling-error, textarea::spelling-error
+{
+    color: var(--text-color);
+    text-decoration: dashed red underline 1.5px;
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill 
+{
+    -webkit-box-shadow: 0 0 0 500px var(--secondary-color) inset;
+    -webkit-text-fill-color: var(--text-color);
+    caret-color: var(--text-color);
+}
+
+input:-webkit-autofill:focus, textarea:-webkit-autofill:focus 
+{
+    -webkit-box-shadow: 0 0 0 500px var(--secondary-color)  inset;
+    -webkit-text-fill-color: var(--text-color);
+    caret-color: var(--text-color);
+}
+
+form button
+{
+    margin-top: 1rem;
+    padding: 7px;
+    font-weight: bold;
+    background-color: var(--primary-color);
+    color: white;
+    transition: 0.5s;
+    border: solid 3px rgba(255, 255, 255, 0);
+    user-select: none;
+
+    /* animation: happy 2s ease-in-out infinite; */
+}
+
+form button:hover
+{
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    border: solid 3px var(--accent-color);
+}
+
+form button:focus 
+{
+    outline: none;
+    border: #4B164C solid 3px;
+}
+
+label:has(input:invalid) ~ button, label:has(textarea:invalid) ~ button 
+{
+    opacity: 0.2;
+    pointer-events: none;
+    animation: none;
+    transition: 0.5 all;
+}
+
+dialog
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    padding: 35px;
+    background-color: rgba(0, 0, 0, 0.734);
+    border: var(--accent-color) solid 5px;
+    box-shadow: black 5px 5px 10px;
+    user-select: none;
+}
+
+dialog div 
+{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+dialog::backdrop 
+{
+    background-color: black;
+    opacity: 0.75;
+    backdrop-filter: blur(10px);
+}
+
+dialog:focus 
+{
+    outline: none;
+}
 /* Animation */
 
 @keyframes flicker
@@ -451,6 +601,20 @@ footer
     }
     100%{
         opacity: 15%;
+    }
+}
+
+@keyframes happy 
+{
+    0%, 100% 
+    {
+        background-color: red;
+        transform: translateY(-10px);
+    }
+    50% 
+    {
+        background-color: orange;
+        transform: translateY(10px);
     }
 }
 
