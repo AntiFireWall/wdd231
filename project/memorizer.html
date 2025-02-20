@@ -43,11 +43,24 @@
     <main>
         <section id="memorizer-menu">
             <h1>Scripture Memorizer <br> Let's Begin!</h1>
-            <button id="mm-button1" onclick="">Custom Scripture List</button>
-            <button id="mm-button2" onclick="">Popular Scripture List</button>
+            <button id="mm-button1" onclick="customScriptureListButton(this)">Custom Scripture List</button>
+            <button id="mm-button2" onclick="preScriptureListButton(this)">Popular Scripture List</button>
         </section>
         <section id="memorizer-game">
-            
+            <div id="scripture-list-input">
+                <h2>Enter Scripture Reference</h2>
+                <input type="text" id="s-ref" spellcheck="false">
+                <ul id="s-list">
+                </ul>
+            </div>
+            <div id="scripture-memorizer">
+                <div id="card-box"></div>
+                <button id="show" onclick="showVerse(this)">Show Scripture</button>
+                <button id="hide-parts" onclick="hideParts(this)">Hide Parts</button>
+                <button id="next" onclick="nextVerse(this)">Next Scripture</button>
+                <button id="past" onclick="pastVerse(this)">Previous Scripture</button>
+                <a href="report.html">Report Bug</a>
+            </div>
         </section>
         <div id="starBox"></div>
     </main>

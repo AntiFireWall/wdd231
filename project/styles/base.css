@@ -231,7 +231,7 @@ footer
     background-color: rgba(0, 0, 0, 0.356);
     border: var(--accent-color) solid 5px;
     box-shadow: black 5px 5px 10px;
-    display: none;
+    display: grid;
     grid-template-areas: 
     "title title"
     "button1 button2";
@@ -277,13 +277,174 @@ footer
     grid-area: button2;
 }
 
-/* Form */
-form 
+#memorizer-game
 {
     padding: 35px;
     background-color: rgba(0, 0, 0, 0.356);
     border: var(--accent-color) solid 5px;
     box-shadow: black 5px 5px 10px;
+    display: none;
+    gap: 25px;
+    /* height: 700px; */
+}
+
+#scripture-list-input
+{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 5px;
+    align-items: center;
+    width: 350px;
+    border-right: solid 2px var(--accent-color);
+}
+
+#scripture-list-input h2
+{
+    text-align: center;
+}
+
+#scripture-list-input input
+{
+    border: 3px solid var(--accent-color);
+    background-color: var(--secondary-color);
+    padding: 0.2rem;
+    width: 15rem;
+}
+
+#scripture-list-input input:focus
+{
+    outline: none;
+}
+
+#scripture-list-input input::selection
+{
+    background-color: var(--primary-color);
+}
+
+#scripture-list-input input:-webkit-autofill
+{
+    -webkit-box-shadow: 0 0 0 500px var(--secondary-color) inset;
+    -webkit-text-fill-color: var(--accent-color);
+}
+
+#s-list
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    list-style-type:decimal;
+    overflow-y: scroll;
+    max-height: 500px;
+    gap: 5px;
+}
+
+#s-list li
+{
+    margin-right: 6px;
+}
+
+#scripture-memorizer
+{
+    padding: 5px;
+    display: grid;
+    gap: 5px;
+    grid-template-areas: 
+    "card-box card-box"
+    "show1 hide1"
+    "past next"
+    "report report";
+}
+
+#scripture-memorizer a
+{
+    margin-top: 5px;
+    grid-area: report;
+    text-align: center;
+}
+
+#scripture-memorizer button
+{
+    font-weight: bold;
+    background-color: var(--primary-color);
+    color: white;
+    transition: 0.5s;
+    border: solid 3px rgba(255, 255, 255, 0);
+}
+
+#scripture-memorizer button:hover
+{
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    border: solid 3px var(--accent-color);
+}
+
+#show
+{
+    grid-area: show1;
+}
+
+#hide-parts
+{
+    grid-area: hide1;
+}
+
+#next
+{
+    grid-area: next;
+}
+
+#past
+{
+    grid-area: past;
+}
+
+#card-box
+{
+    grid-area: card-box;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 3px solid var(--primary-color);
+    background-color: rgba(0, 0, 0, 0.462);
+    height: 33rem;
+    width: 25rem;
+}
+
+.index
+{
+    display: none;
+}
+
+/* Scroll Bar */
+
+::-webkit-scrollbar {
+    width: 8px;
+    position: absolute;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: none;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 3px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+/* Form */
+form 
+{
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -366,7 +527,6 @@ form button
 {
     margin-top: 1rem;
     padding: 7px;
-    text-decoration: none;
     font-weight: bold;
     background-color: var(--primary-color);
     color: white;
@@ -468,6 +628,11 @@ dialog:focus
 .fade-in
 {
     animation: fade-in 1s 1 forwards;
+}
+
+.hide-box
+{
+    display: none;
 }
 
 @keyframes fade-out {
