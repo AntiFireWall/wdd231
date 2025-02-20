@@ -63,7 +63,7 @@ async function getScriptureFromInput(ref)
     const refInfo = ref.split(" ");
     sRef.value = ""
     let script;
-    refInfo.length > 1 ? script = (await apiFetch(`https://proxy.corsfix.com/?https://api.nephi.org/scriptures/?q=${refInfo[0]}+${refInfo[1].replaceAll(":", "%3A")}`)) : console.log("Invalid Text");
+    refInfo.length > 1 ? script = (await apiFetch(`https://corsproxy.io/?url=https://api.nephi.org/scriptures/?q=${refInfo[0]}+${refInfo[1].replaceAll(":", "%3A")}`)) : console.log("Invalid Text");
     script != null && script.scriptures.length != 0 ? addScriptureToList(script.scriptures[0]) : false
 }
 
