@@ -445,6 +445,10 @@ footer
 /* Form */
 form 
 {
+    padding: 35px;
+    background-color: rgba(0, 0, 0, 0.356);
+    border: var(--accent-color) solid 5px;
+    box-shadow: black 5px 5px 10px;
     display: flex;
     flex-direction: column;
     width: 80%;
