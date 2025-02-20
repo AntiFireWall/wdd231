@@ -1,5 +1,12 @@
 @media only screen and not (min-width: 750px)
 {
+    main
+    {
+        min-height: 87vh;
+        height: fit-content;
+        padding: 20px 0;
+    }
+
     /* Menu Button */
 
     .menu
@@ -79,6 +86,26 @@
     #greet-text
     {
         width: 78%;
+    }
+
+    /* Scripture Memorizer */
+
+    #memorizer-game
+    {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    #card-box
+    {
+        width: 20rem;
+        height: 15rem;
+    }
+
+    #scripture-memorizer button
+    {
+        padding: 1rem 0;
+        font-size: medium;
     }
 }
 

@@ -45,10 +45,17 @@ let sList = [];
 
 sRef.addEventListener("keydown", isEnter)
 
-function isEnter(key)
+async function isEnter(key)
 {
     let isTrue = key.code == "Enter" 
-    isTrue ? getScriptureFromInput(sRef.value) : false
+    if(isTrue)
+    {
+        await getScriptureFromInput(sRef.value);
+        cardBox.innerHTML == "" ? displayVerse(await getVerseFromLS(1), 1) : false
+    } else
+    {
+        return
+    }
 }
 
 async function getScriptureFromInput(ref)
@@ -94,38 +101,112 @@ async function getScriptureFromLocal(amount)
 
 async function getVerseFromLS(index)
 {
-    let verse = localStorage.getItem("scriptures").split("%")[index].split("+")
-    console.log(verse)
+    let verse = await localStorage.getItem("scriptures").split("%")[index].split("+")
     return verse
 }
 
-function displayVerse(vers)
+function displayVerse(vers, indexNum)
 {
     const title = document.createElement("h3");
     const text = document.createElement("p");
+    const index = document.createElement("p")
+    index.textContent = indexNum;
+    index.classList.add("index");
 
     title.textContent = `${vers[0]}`;
     text.textContent = `${vers[1]}`;
 
     cardBox.appendChild(title);
     cardBox.appendChild(text);
+    cardBox.appendChild(index)
+}
+
+function hideWord(text)
+{
+    let textArray = text.split(" ")
+    let rnd = 0;
+    let word = "_";
+    while(word.includes("_"))
+    {
+        rnd = Math.floor(Math.random() * textArray.length)
+        word = textArray[rnd]
+    }
+    let length = word.length
+    let newWord = "";
+    for(let i = 0; i < length; i++)
+    {
+        newWord += "_"
+    }
+    textArray[rnd] = newWord
+    let fullText = "";
+    let indexNum = 0;
+    textArray.forEach(element => {
+        if((indexNum+1) != textArray.length)
+        {
+            fullText += `${element} `
+        } else
+        {
+            fullText += `${element}`
+        }
+        indexNum++
+    });
+    return fullText
 }
 
 // Button Methods
 
-function customScriptureListButton()
+async function customScriptureListButton()
 {
+    clearLocalStorage()
     memorizerMenu.classList.toggle("fade-out")
     memorizerMenu.style.display = "none"
     memorizerGame.style.display = "flex"
     memorizerGame.classList.toggle("fade-in")
 }
 
-function preScriptureListButton()
+async function preScriptureListButton()
 {
+    clearLocalStorage()
     memorizerMenu.classList.toggle("fade-out")
     memorizerMenu.style.display = "none"
     memorizerGame.style.display = "flex"
     memorizerGame.classList.toggle("fade-in")
-    getScriptureFromLocal(5)
+    await getScriptureFromLocal(5)
+    displayVerse(await getVerseFromLS(1), 1)
+}
+
+async function nextVerse() {
+    let index = cardBox.children[2].textContent
+    cardBox.innerHTML = ""
+    index++
+    index > sListBox.children.length ? index = 1 : index;
+    displayVerse(await getVerseFromLS(index), index)
+}
+
+async function pastVerse() {
+    let index = cardBox.children[2].textContent
+    cardBox.innerHTML = ""
+    index -= 1
+    index < 1 ? index = sListBox.children.length : index;
+    displayVerse(await getVerseFromLS(index), index)
+}
+
+async function hideParts() {
+    let text = cardBox.children[1].textContent
+    let isHidden = 0
+    text.split(" ").forEach(element => {
+        element.includes("_") ? isHidden++ : false
+    });
+    if (isHidden == text.split(" ").length)
+    {
+        return;
+    }
+    cardBox.children[1].textContent = hideWord(text);
+    console.log("hide")
+}
+
+async function showVerse() {
+    let index = cardBox.children[2].textContent
+    cardBox.innerHTML = ""
+    displayVerse(await getVerseFromLS(index), index)
 }

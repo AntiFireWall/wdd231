@@ -285,7 +285,7 @@ footer
     box-shadow: black 5px 5px 10px;
     display: none;
     gap: 25px;
-    height: 700px;
+    /* height: 700px; */
 }
 
 #scripture-list-input
@@ -352,8 +352,15 @@ footer
     grid-template-areas: 
     "card-box card-box"
     "show1 hide1"
-    "reset reset"
-    "past next";
+    "past next"
+    "report report";
+}
+
+#scripture-memorizer a
+{
+    margin-top: 5px;
+    grid-area: report;
+    text-align: center;
 }
 
 #scripture-memorizer button
@@ -382,11 +389,6 @@ footer
     grid-area: hide1;
 }
 
-#reset
-{
-    grid-area: reset;
-}
-
 #next
 {
     grid-area: next;
@@ -410,6 +412,11 @@ footer
     background-color: rgba(0, 0, 0, 0.462);
     height: 33rem;
     width: 25rem;
+}
+
+.index
+{
+    display: none;
 }
 
 /* Scroll Bar */

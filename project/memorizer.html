@@ -54,14 +54,12 @@
                 </ul>
             </div>
             <div id="scripture-memorizer">
-                <div id="card-box">
-
-                </div>
-                <button id="show">Show Scripture</button>
-                <button id="hide-parts">Hide Parts</button>
-                <button id="reset">Rest</button>
-                <button id="next">Next Scripture</button>
-                <button id="past">Previous Scripture</button>
+                <div id="card-box"></div>
+                <button id="show" onclick="showVerse(this)">Show Scripture</button>
+                <button id="hide-parts" onclick="hideParts(this)">Hide Parts</button>
+                <button id="next" onclick="nextVerse(this)">Next Scripture</button>
+                <button id="past" onclick="pastVerse(this)">Previous Scripture</button>
+                <a href="report.html">Report Bug</a>
             </div>
         </section>
         <div id="starBox"></div>
