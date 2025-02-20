@@ -1,40 +1,17 @@
-const dialog = document.querySelector("#thankyou");
-const closeBtn = document.querySelector("#exit");
+let data = localStorage.getItem("bugReport").split(",");
+const infobox = document.querySelector("#infobox");
 
-if (document.URL.includes("?")) 
-{
-    dialog.showModal();
+const displayName = document.createElement("h2");
+const email = document.createElement("p");
+const report = document.createElement("p");
+const date = document.createElement("p");
 
-    // storing data into local storage
-    const data = document.URL.split("?")[1]
-    .replaceAll("%40", "@")
-    .replaceAll("+", " ")
-    .replaceAll("%28", "(")
-    .replaceAll("%29", ")")
-    .replaceAll("%3A", "-")
-    .split("&")
-    // console.log(data)
+displayName.innerHTML = `${data[0].split("=")[1]} ${data[1].split("=")[1]}`;
+email.innerHTML = `We will send you an update to <b>${data[2].split("=")[1]}</b>`;
+report.innerHTML = `This is what you wrote: <b>${data[3].split("=")[1]}</b>`;
+date.innerHTML = `at: ${data[4].split("=")[1]}`;
 
-    let object = {};
-    let array = []
-    data.forEach(element => {
-        let stuff = element.split("=");
-        object[stuff[0]] = stuff[1];
-
-        array.push(element);
-    });
-    // console.log(object);
-    // console.log(array);
-
-
-    localStorage.setItem("bugReport", array)
-}
-
-
-
-closeBtn.addEventListener("click", hide);
-
-function hide () 
-{
-    dialog.close()
-}
+infobox.appendChild(displayName);
+infobox.appendChild(email);
+infobox.appendChild(report);
+infobox.appendChild(date);

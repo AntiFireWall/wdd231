@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This website will help you memorize your Scriptures!">
+    <meta name="description" content="This website will help you memorize your Scriptures! Thank you page">
     <meta name="author" content="Daniel Ayvazyan">
-    <meta property="og:title" content="Scripture Memorizer">
+    <meta property="og:title" content="Thank you">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://antifirewall.github.io/wdd231/project/images/web-card-img.png">
     <meta property="og:url" content="https://antifirewall.github.io/wdd231/project/index.html">
-    <meta property="og:description" content="This website will help you memorize your Scriptures!">
+    <meta property="og:description" content="This website will help you memorize your Scriptures! Thank you">
     <meta name="twitter:card" content="summary_large_image">
-    <title>Scripture Memorizer - Game</title>
+    <title>Scripture Memorizer - Thank you</title>
     <link rel="icon" href="logo.ico">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/base-small.css">
@@ -21,7 +21,7 @@
     <script src="scripts/hamburger.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/stars.js" defer></script>
-    <script src="scripts/thankyoudialog.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
 </head>
 <body>
     <header>
@@ -33,30 +33,23 @@
         <h1>Scripture Memorizer</h1>
         <nav id="animateme" class="nav-bar">
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li id="current-page"><a href="index.html">Home</a></li>
                 <li><a href="memorizer.html">Scripture Memorizer</a></li>
-                <li id="current-page"><a href="report.html">Report Bug</a></li>
+                <li><a href="report.html">Report Bug</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <div id="starBox"></div>
-        <form action="report.html" method="get">
-            <h1>Report Bug</h1>
-            <label for="fname">First Name<input type="text" name="fname" id="fname" required><p></p></label>
-            <label for="lname">Last Name<input type="text" name="lname" id="lname" required><p></p></label>
-            <label for="email">Email<input type="email" name="email" id="email" required><p></p></label>
-            <label for="report">Report bug<textarea name="report" id="report" required></textarea><p></p></label>
-            <input type="hidden" name="date" id="hidden">
-            <button type="submit" id="submit">Report</button>
-            
-        </form>
-        <dialog id="thankyou" autofocus >
-            Thank you for Reporting
-            <div id="exit">
-                →
+        <section id="greet-text">
+            <h1>Thank you for reporting bugs</h1>
+            <div id="infobox">
+
             </div>
-        </dialog>
+            <br>
+            <p>You can go back to memorizing</p>
+            <a href="memorizer.html">Start Memorizing!</a>
+        </section>
+        <div id="starBox"></div>
     </main>
     <footer>
         <p>&copy;<span id="currentyear"></span> | Daniel Ayvazyan | WDD 231 Project</p>
