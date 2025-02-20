@@ -21,6 +21,7 @@
     <script src="scripts/hamburger.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/stars.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
 </head>
 <body>
     <header>
@@ -40,6 +41,22 @@
     </header>
     <main>
         <div id="starBox"></div>
+        <form action="report.html" method="get">
+            <h1>Report Bug</h1>
+            <label for="fname">First Name<input type="text" name="fname" id="fname" required><p></p></label>
+            <label for="lname">Last Name<input type="text" name="lname" id="lname" required><p></p></label>
+            <label for="email">Email<input type="email" name="email" id="email" required><p></p></label>
+            <label for="report">Report bug<textarea name="report" id="report" required></textarea><p></p></label>
+            <input type="hidden" name="date" id="hidden">
+            <button type="submit" id="submit">Report</button>
+            
+        </form>
+        <dialog id="thankyou" autofocus >
+            Thank you for Reporting
+            <div id="exit">
+                X
+            </div>
+        </dialog>
     </main>
     <footer>
         <p>&copy;<span id="currentyear"></span> | Daniel Ayvazyan | WDD 231 Project</p>
